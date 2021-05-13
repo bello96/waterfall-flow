@@ -1,0 +1,32 @@
+{
+  "name": "water-deng",
+  "version": "1.0.5",
+  "main": "index.js",
+  "author": {
+    "name": "bello",
+    "email": "bello96@163.com"
+  },
+  "description": "不定宽高触底加载更多-瀑布流waterfall",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "瀑布流",
+    "不定宽高",
+    "触底加载",
+    "water-fall-flow"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bello96/waterfall-flow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bello96/waterfall-flow.git",
+    "email": "bello96@163.com"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  }
+}
