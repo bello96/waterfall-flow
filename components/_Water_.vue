@@ -1,11 +1,11 @@
 <template>
   <ul class="_Water_Box_" ref="_Water_Box_">
     <slot></slot>
-    <div class="notyetbox" v-if="isempty">
+    <div class="not_yet_box" v-if="isempty">
       <img src="./../notyet.svg" alt="" />
       <span>{{ emptyText }}</span>
     </div>
-    <div v-if="isPeriod" :style="baseLineStyle" class="notext">
+    <div class="note_txt" v-if="isPeriod" :style="baseLineStyle">
       <span>- {{ noMoreText }} -</span>
     </div>
   </ul>
@@ -96,7 +96,7 @@ export default {
           this.isPeriod = true;
           this.removeScrollCallback();
         } else {
-          this.$emit("bottomEvent");
+          this.$emit("bottomEvent",waterbox);
         }
       }
     },
@@ -104,7 +104,7 @@ export default {
       let ulDom = this.$refs._Water_Box_;
       ulDom.removeEventListener("scroll", this.scrollId);
     },
-    throttle(func, wait = 800, vdom) {
+    throttle(func, wait, vdom) {
       let previous = 0,
         timer = null;
       return function anonymous() {
@@ -151,7 +151,7 @@ export default {
 }
 ._Water_Box_::-webkit-scrollbar-thumb {
   border-radius: 2px;
-  background: #DEE1E6;
+  background: rgba(222,225,230,0.8);
 }
 ._Water_Box_ ._Water_Cell_Box {
   list-style: none;
@@ -163,24 +163,23 @@ export default {
   padding: 0;
   margin: 0;
 }
-._Water_Box_ .notext {
+
+._Water_Box_ .note_txt {
   position: absolute;
   width: 100%;
   text-align: center;
   padding-bottom: 5px;
 }
-._Water_Box_ .notyetbox {
+._Water_Box_ .not_yet_box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #bbb;
   text-align: center;
-}
-._Water_Box_ .notyetbox span {
-  text-align: center;
-  display: block;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
 >

@@ -1,6 +1,6 @@
 {
   "name": "water-deng",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "author": {
     "name": "bello",
@@ -11,9 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "瀑布流",
+    "瀑布流布局",
     "不定宽高",
-    "触底加载",
+    "触底加载更多",
     "water-fall-flow"
   ],
   "license": "ISC",
