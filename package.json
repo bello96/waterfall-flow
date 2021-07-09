@@ -1,6 +1,6 @@
 {
   "name": "water-deng",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "author": {
     "name": "bello",
@@ -24,9 +24,5 @@
   "bugs": {
     "url": "https://github.com/bello96/waterfall-flow.git",
     "email": "bello96@163.com"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
   }
 }
